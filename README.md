@@ -43,3 +43,21 @@ By following these steps, you will have the necessary dependencies installed to 
 For educational purposes, we have provided a comprehensive Dockerfile to set up a rock instance with all the necessary dependencies for using `oracle.resourcer`. Additionally, we have included the [`dsOMOP`](https://github.com/isglobal-brge/dsOMOP) package and its extension for Oracle databases [`dsOMOP.oracle`](https://github.com/isglobal-brge/dsOMOP.oracle) (which is built on top of `oracle.resourcer`). 
 
 You can find the Dockerfile at the following link: [oracle.resourcer Dockerfile](inst/docker/Dockerfile)
+
+## Acknowledgements
+
+- The development of dsOMOP has been supported by the **[RadGen4COPD](https://github.com/isglobal-brge/RadGen4COPD)**, **[P4COPD](https://www.clinicbarcelona.org/en/projects-and-clinical-assays/detail/p4copd-prediction-prevention-personalized-and-precision-management-of-copd-in-young-adults)**, and **[DATOS-CAT](https://datos-cat.github.io/LandingPage)** projects. These collaborations have not only provided essential financial backing but have also affirmed the project's relevance and application in significant research endeavors.
+- This project has received funding from the **[Spanish Ministry of Science and Innovation](https://www.ciencia.gob.es/en/)** and **[State Research Agency](https://www.aei.gob.es/en)** through the **“Centro de Excelencia Severo Ochoa 2019-2023” Program [CEX2018-000806-S]** and **[State Research Agency](https://www.aei.gob.es/en)** and **[Fondo Europeo de Desarrollo Regional, UE](https://ec.europa.eu/regional_policy/funding/erdf_en) (PID2021-122855OB-I00)**, and support from the **[Generalitat de Catalunya](https://web.gencat.cat/en/inici/index.html)** through the **CERCA Program** and **[Ministry of Research and Universities](https://recercaiuniversitats.gencat.cat/en/inici/) (2021 SGR 01563)**.
+- This project has received funding from the **"Complementary Plan for Biotechnology Applied to Health"**, coordinated by the **[Institut de Bioenginyeria de Catalunya (IBEC)](https://ibecbarcelona.eu/)** within the framework of the **Recovery, Transformation, and Resilience Plan (C17.I1)** - Funded by the **[European Union](https://european-union.europa.eu/index_en)** - **[NextGenerationEU](https://next-generation-eu.europa.eu/index_en)**.
+- Special thanks to **[Xavier Escribà-Montagut](https://github.com/ESCRI11)** for his invaluable support in the development process.
+
+## Contact
+
+For further information or inquiries, please contact:
+
+- **Juan R González**: juanr.gonzalez@isglobal.org
+- **David Sarrat González**: david.sarrat@isglobal.org
+
+For more details about **DataSHIELD**, visit [https://www.datashield.org](https://www.datashield.org).
+
+For more information about the **Barcelona Institute for Global Health (ISGlobal)**, visit [https://www.isglobal.org](https://www.isglobal.org).
