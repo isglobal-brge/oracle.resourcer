@@ -8,9 +8,9 @@
 
 To use the `oracle.resourcer` package, it is necessary to have Oracle Instant Client Basic and SDK installed on your system. Follow the steps below to install these dependencies:
 
-1. Download the Oracle Instant Client Basic and SDK from the official Oracle website:
-   - [Instant Client Basic](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)
-   - [Instant Client SDK](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)
+1. Download the Oracle Instant Client Basic and SDK from the [official Oracle website](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html):
+   - Instant Client Basic
+   - Instant Client SDK
 
 2. Unzip the downloaded files and move them to a directory of your choice, for example, `/opt/oracle`:
    ```sh
