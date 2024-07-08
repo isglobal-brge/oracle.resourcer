@@ -1,6 +1,6 @@
 Package: oracle.resourcer
-Title: Oracle Resource Resolver
-Version: 0.0.0.9000
+Title: Oracle Resourcer Extension
+Version: 1.0.0
 Authors@R:
     c(person("David", "Sarrat González", , "david.sarrat@isglobal.org", role = c("aut", "cre")),
       person("Xavier", "Escribà-Montagut", , "xavier.escriba@isglobal.org", role = c("aut")),
