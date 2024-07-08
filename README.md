@@ -40,6 +40,6 @@ By following these steps, you will have the necessary dependencies installed to 
 
 ## Example Dockerfile
 
-For educational purposes, we have provided a comprehensive Dockerfile to set up a rock instance with all the necessary dependencies for using `oracle.resourcer`. Additionally, we have included the [`dsOMOP`](https://github.com/isglobal-brge/dsOMOP) package and its extension for Oracle databases (which is built on top of `oracle.resourcer`). 
+For educational purposes, we have provided a comprehensive Dockerfile to set up a rock instance with all the necessary dependencies for using `oracle.resourcer`. Additionally, we have included the [`dsOMOP`](https://github.com/isglobal-brge/dsOMOP) package and its extension for Oracle databases [`dsOMOP.oracle`](https://github.com/isglobal-brge/dsOMOP.oracle) (which is built on top of `oracle.resourcer`). 
 
 You can find the Dockerfile at the following link: [oracle.resourcer Dockerfile](inst/docker/Dockerfile)
