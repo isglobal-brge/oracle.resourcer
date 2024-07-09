@@ -38,6 +38,12 @@ To use the `oracle.resourcer` package, it is necessary to have Oracle Instant Cl
 
 By following these steps, you will have the necessary dependencies installed to use the `oracle.resourcer` package for interacting with Oracle databases.
 
+## Installation verification
+
+Please note that packages which do not expose assign and aggregate methods may be installed correctly on the system, but will not appear in the list of installed packages in the `Administration` > `DataSHIELD` > `(Profile)` > `Packages` section of the Opal UI. This is to avoid displaying other installed packages and dependencies, while focusing solely on DataSHIELD items.
+
+In the case of `oracle.resourcer`, users can verify the installation in the `Administration` > `R` > `(Profile)` > `Packages` section of the Opal UI. This section lists all installed packages and can be filtered by name.
+
 ## Example Dockerfile
 
 For educational purposes, we have provided a comprehensive Dockerfile to set up a rock instance with all the necessary dependencies for using `oracle.resourcer`. Additionally, we have included the [`dsOMOP`](https://github.com/isglobal-brge/dsOMOP) package and its extension for Oracle databases [`dsOMOP.oracle`](https://github.com/isglobal-brge/dsOMOP.oracle) (which is built on top of `oracle.resourcer`). 
