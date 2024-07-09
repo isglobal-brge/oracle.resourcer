@@ -15,3 +15,5 @@ Depends:
     DBI,
     resourcer,
     ROracle
+AggregateMethods:
+    .check_oracle_resourcer_prereqs
