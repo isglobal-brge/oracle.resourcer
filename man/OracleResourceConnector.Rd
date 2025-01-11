@@ -3,18 +3,47 @@
 \docType{class}
 \name{OracleResourceConnector}
 \alias{OracleResourceConnector}
-\title{Oracle DBI resource connector}
+\title{Oracle DBI Resource Connector}
 \format{
-A R6 object of class OracleResourceConnector
+An R6 class object extending DBIResourceConnector
 }
 \description{
-Oracle DBI resource connector
-
-Oracle DBI resource connector
+A specialized connector class for establishing and managing Oracle database connections through DBI.
+This class extends the DBIResourceConnector to provide Oracle-specific connection handling.
 }
 \details{
-Makes a Oracle DBI connection from a resource description.
+The OracleResourceConnector provides functionality to:
+\itemize{
+\item Validate Oracle database resource configurations
+\item Create and manage Oracle database connections
+\item Handle Oracle-specific connection parameters and requirements
 }
+
+The connector expects resources with:
+\itemize{
+\item A valid Oracle URL (scheme: "oracle")
+\item Authentication credentials (identity/username and secret/password)
+\item Proper database connection parameters (host, port, database name)
+}
+}
+\examples{
+\dontrun{
+# Create a new connector
+connector <- OracleResourceConnector$new()
+
+# Example resource configuration
+resource <- list(
+  url = "oracle://localhost:1521/ORCL",
+  identity = "username",
+  secret = "password"
+)
+
+# Create connection
+conn <- connector$createDBIConnection(resource)
+}
+
+}
+\keyword{internal}
 \section{Super class}{
 \code{\link[resourcer:DBIResourceConnector]{resourcer::DBIResourceConnector}} -> \code{OracleResourceConnector}
 }
@@ -41,20 +70,21 @@ Makes a Oracle DBI connection from a resource description.
 \if{html}{\out{<a id="method-OracleResourceConnector-new"></a>}}
 \if{latex}{\out{\hypertarget{method-OracleResourceConnector-new}{}}}
 \subsection{Method \code{new()}}{
-Creates a new OracleResourceConnector instance.
+Initialize a new OracleResourceConnector instance.
+This method sets up the basic structure for Oracle database connections.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{OracleResourceConnector$new()}\if{html}{\out{</div>}}
 }
 
 \subsection{Returns}{
-A OracleResourceConnector object.
+An initialized OracleResourceConnector object.
 }
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-OracleResourceConnector-isFor"></a>}}
 \if{latex}{\out{\hypertarget{method-OracleResourceConnector-isFor}{}}}
 \subsection{Method \code{isFor()}}{
-Check that the provided resource has a URL that locates a Oracle object: the URL scheme must be "oracle".
+Validates whether a given resource configuration is suitable for Oracle connections.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{OracleResourceConnector$isFor(resource)}\if{html}{\out{</div>}}
 }
@@ -62,19 +92,33 @@ Check that the provided resource has a URL that locates a Oracle object: the URL
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{resource}}{The resource object to validate.}
+\item{\code{resource}}{A list containing resource configuration parameters:
+\itemize{
+\item url: The Oracle database URL
+\item identity: Username for authentication
+\item secret: Password for authentication
+}}
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Details}{
+Performs validation checks on the resource object to ensure it contains:
+\itemize{
+\item A valid URL
+\item Authentication credentials (identity and secret)
+\item Correct URL scheme ("oracle")
+}
+}
+
 \subsection{Returns}{
-A logical.
+logical TRUE if the resource is valid for Oracle connections, FALSE otherwise
 }
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-OracleResourceConnector-createDBIConnection"></a>}}
 \if{latex}{\out{\hypertarget{method-OracleResourceConnector-createDBIConnection}{}}}
 \subsection{Method \code{createDBIConnection()}}{
-Creates a DBI connection object from a resource.
+Establishes a connection to an Oracle database using the provided resource configuration.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{OracleResourceConnector$createDBIConnection(resource)}\if{html}{\out{</div>}}
 }
@@ -82,12 +126,28 @@ Creates a DBI connection object from a resource.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{resource}}{A valid resource object.}
+\item{\code{resource}}{A list containing Oracle connection parameters:
+\itemize{
+\item url: The Oracle database URL (format: "oracle://host:port/database")
+\item identity: Username for database authentication
+\item secret: Password for database authentication
+}}
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Details}{
+The connection process involves:
+\enumerate{
+\item Validating the resource configuration
+\item Loading required dependencies (DBI and ROracle)
+\item Creating an Oracle driver instance
+\item Parsing the connection URL
+\item Establishing the database connection
+}
+}
+
 \subsection{Returns}{
-A DBI connection object.
+A DBI connection object for the Oracle database
 }
 }
 \if{html}{\out{<hr>}}
